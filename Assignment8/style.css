@@ -1,0 +1,18 @@
+body {
+  background-color: #f8f9fa;
+}
+
+h1 {
+  color: #0077b6;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
