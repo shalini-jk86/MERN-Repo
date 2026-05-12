@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Travel Explorer</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- <div class="hamburger" onclick="toggleMenu()">☰</div> -->
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Discover Your Next Adventure</h1>
+      <p>Explore the world with ease and style</p>
+      <br>      <a href="#destinations" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Easy Booking</h3>
+        <p>Book your trips in just a few clicks.</p>
+      </div>
+      <div class="feature">
+        <h3>Best Destinations</h3>
+        <p>Handpicked locations for unforgettable experiences.</p>
+      </div>
+      <div class="feature">
+        <h3>24/7 Support</h3>
+        <p>We’re here to help you anytime, anywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+ <section id="destinations" class="destinations">
+  <h2>Popular Destinations</h2>
+  <div class="destination-grid">
+    <div class="destination">
+      <img src="images/destination1.webp" alt="Paris">
+      <h3>Paris</h3>
+      <p>The city of lights and love.</p>
+    </div>
+    <div class="destination">
+      <img src="images/destination2.webp" alt="Bali">
+      <h3>Bali</h3>
+      <p>Tropical paradise with stunning beaches.</p>
+    </div>
+    <div class="destination">
+      <img src="images/destination3.webp" alt="New York">
+      <h3>New York</h3>
+      <p>The city that never sleeps.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Travel Explorer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
