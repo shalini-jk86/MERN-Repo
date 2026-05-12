@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Simple static portfolio showcasing details, skills, projects, and a contact form." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0; /* start invisible */
+      animation: fadeIn 2s ease-in forwards; /* run animation */
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1; /* end fully visible */
+      }
+    }
+    .slide-in {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+  </style>  
+</head>
+<body>
+  
+  <div class="container">
+    <header>
+      <div>
+        
+        <strong><h1 class="fade-in">Shalini Jeyakumar</h1></strong>
+        <img src="image.avif" alt="Profile Picture" width="150" height="150">
+        <br>
+        <span class="meta">Engineering Manager • Delivering Strategic Projects with Precision and Leadership <br> Bangalore , India</span>
+      </div>  
+      <br>
+      <div>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    </header>
+
+    <main id="main">
+      
+
+      <!-- Details -->
+      <section class="card" aria-labelledby="details-title">
+        <h2 id="details-title" >Executive Summary</h2>
+        <div class="grid">
+          
+          <div>
+            <p class="meta">Engineering leader with 17+ years of experience in software engineering, program delivery, and digital transformation across healthcare, energy, and technology domains. Proven success in building high-scale distributed systems, leading cross-functional engineering teams of 40+, and delivering enterprise-grade solutions with measurable business impact. Skilled in architectural design, fraud mitigation strategies, and agile product development, with a track record of driving operational efficiency, reducing downtime, and accelerating product adoption. Passionate about fostering strong engineering cultures, mentoring diverse teams, and delivering innovative solutions at scale.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Profile -->
+       <!-- Details -->
+      <section class="card" aria-labelledby="details-title">
+        <h2 id="details-title"> Professional Profile </h2>
+        <div class="grid">
+          
+          <div>
+            <p class="meta">
+              <ul>
+                <li>	At Siemens Energy, playing a pivotal role in driving the successful execution of digital transformation initiatives, contributing to 20% improvement in operational efficiency within the renewable energy domain.</li>
+                <li>Certified PMP® professional with deep expertise in project planning, scope management, risk mitigation, and stakeholder engagement across global delivery models.</li>
+                <li>Adept at defining and prioritizing backlogs, aligning business goals with technical solutions, and delivering high-value features that improved customer satisfaction scores by 15%.</li>
+                <li>Managed team operations, including performance reviews, goal setting, and approval of leaves and absences for junior staff, resulting in 20% increase in team productivity and reduced attrition by 10%.</li>
+                <li>Led the development of a comprehensive service roadmap and value proposition strategy for an enterprise technology implementation partnership, driving $5M in new business value and 40% increase in solution adoption.</li>
+                <li>Conducted in-depth market analysis, competitive benchmarking, and customer research to craft differentiated service offerings, resulting in three new service lines launched.</li>
+                <li>Excellence in managing end-to-end delivery/program/project planning & implementation from scope management to activity sequencing, effort & cost estimation, risk analysis, to quality management, achieving projects under budget by 8% consistently.</li>
+                <li>Developed a profound understanding of both project development and management, having transitioned from development roles to strategic leadership positions, accumulating a diverse skill set in analytics and project strategy that enabled successful delivery of 10+ enterprise programs.</li>
+                <li>Rich exposure in devising & implementing project development & management plans after studying current consumer insights & technology trends, effectuating the same for different consumer segments, leading to customer engagement growth of 18%.</li>
+                <li>Bootstrapped Scrum Framework by engineering LEAN practices and SAFe concepts; improving release predictability by 25%.</li>
+              </ul></div>
+        </div>
+      </section>
+
+      <!-- Core Competencies -->
+      <section class="card" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Core Competencies</h2>
+        <div class="skills-list" role="list">
+          <span class="skill" role="listitem">Digital Transformation & AI Integration</span>
+          <span class="skill" role="listitem">Distributed Systems & High-Throughput Architectures</span>
+          <span class="skill" role="listitem">Predictive Analytics & Data Strategy</span>
+          <span class="skill" role="listitem">Regulatory Compliance (FDA, HIPAA, GDPR)</span>
+          <span class="skill" role="listitem">Stakeholder Engagement & Governance</span>
+          <span class="skill" role="listitem">Risk Management & Cybersecurity</span>
+          <span class="skill" role="listitem">Team Leadership & Mentorship</span>
+          <span class="skill" role="listitem">Budgeting & Resource Optimization</span>
+        </div>
+      </section>
+
+       <!-- Technical Skills -->
+      <section class="card" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Technical Skills</h2>
+        <p class="meta">
+          <ul>
+            <li>Project & Agile Management Tools: Azure DevOps, JIRA, Confluence, HP ALM, TFS</li>
+            <li>Cloud Platforms: Azure, GCP, AWS </li>
+            <li>DevOps Tools: Jenkins, WebLogic, GIT </li>
+            <li>Security & Compliance: Cybersecurity , HIPAA, HL7 ,FDA</li>
+            <li>Programming Languages: Python, C#, C++, SQL, PL/SQL </li>
+            <li>Front-End Technologies: ReactJS, HTML5, CSS </li>
+            <li>Architectural Patterns: Kubernetes, Microservices, APIs </li>
+            <li>Data Analytics & Monitoring: Tableau, Azure App Insights, Google Analytics </li>
+            <li>Design & UX Tools: MIRO, FIGMA, XMind, UML </li>
+            <li>Business Models & Service Offerings: SaaS, PaaS, B2B, B2C </li>
+          </ul>
+        </p>
+      </section>
+
+      <!-- Projects -->
+      <section class="card" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <div class="grid">
+          <article class="project card" aria-labelledby="p1-title">
+            <h3 id="p1-title" class="slide-in">Secure Cloud Landing Zone</h3>
+            <img src="cloud.jpg" alt="Cloud Landing Zone">
+            <p class="meta">AWS Control Tower • IAM • GuardDuty</p>
+            <p>Designed a secure multi-account landing zone with central logging, detective controls, and least-privilege access patterns.</p>
+            <div class="links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Live demo</a>
+              <a class="btn secondary" href="#" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+
+          <article class="project card" aria-labelledby="p2-title">
+            <h3 id="p2-title" class="slide-in">Observability Platform</h3>
+            <img src="obs.jpg" alt="Observability Dashboard">
+            <p class="meta">Grafana • Prometheus • SLOs</p>
+            <p>Implemented golden signals, SLO-based alerts, and release dashboards to improve incident response and reliability.</p>
+            <div class="links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Case study</a>
+              <a class="btn secondary" href="#" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+
+          <article class="project card" aria-labelledby="p3-title">
+            <h3 id="p3-title" class="slide-in">Zero Trust Pilot</h3>
+            <img src="zt.jpg" alt="Zero Trust Architecture">
+            <p class="meta">Azure • Conditional Access • MDM</p>
+            <p>Rolled out identity-centric controls, device compliance, and least privilege policies across a pilot group with measurable risk reduction.</p>
+            <div class="links">
+              <a class="btn" href="#" target="_blank" rel="noopener">Summary</a>
+              <a class="btn secondary" href="#" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="card" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+
+        <div id="form-status" class="sr-only" aria-live="polite"></div>
+
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required minlength="2" maxlength="60" />
+            <span class="error" id="name-error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <span class="error" id="email-error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can I help?" required minlength="10" maxlength="1000"></textarea>
+            <span class="error" id="message-error" aria-live="polite"></span>
+          </div>
+
+          <button class="btn" type="submit">Send message</button>
+          <p class="success" id="success" hidden>Thanks! Your message passed validation. (In a real site, this would be sent to a backend.)</p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Your Name. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Accessibility: dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('contactForm');
+    const fields = {
+      name: {
+        el: document.getElementById('name'),
+        errorEl: document.getElementById('name-error'),
+        validate: (v) => {
+          if (!v.trim()) return 'Name is required.';
+          if (v.trim().length < 2) return 'Name must be at least 2 characters.';
+          if (v.trim().length > 60) return 'Name must be under 60 characters.';
+          return '';
+        }
+      },
+      email: {
+        el: document.getElementById('email'),
+        errorEl: document.getElementById('email-error'),
+        validate: (v) => {
+          if (!v.trim()) return 'Email is required.';
+          // Simple, robust email pattern
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!re.test(v)) return 'Please enter a valid email address.';
+          return '';
+        }
+      },
+      message: {
+        el: document.getElementById('message'),
+        errorEl: document.getElementById('message-error'),
+        validate: (v) => {
+          const t = v.trim();
+          if (!t) return 'Message is required.';
+          if (t.length < 10) return 'Message must be at least 10 characters.';
+          if (t.length > 1000) return 'Message must be under 1000 characters.';
+          return '';
+        }
+      }
+    };
+
+    function showError(fieldKey, msg) {
+      const { el, errorEl } = fields[fieldKey];
+      errorEl.textContent = msg;
+      el.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      el.style.borderColor = msg ? getComputedStyle(document.documentElement).getPropertyValue('--error') : '#1f2937';
+    }
+
+    function validateField(fieldKey) {
+      const { el, validate } = fields[fieldKey];
+      const msg = validate(el.value);
+      showError(fieldKey, msg);
+      return !msg;
+    }
+
+    // Real-time validation
+    Object.keys(fields).forEach((k) => {
+      fields[k].el.addEventListener('input', () => validateField(k));
+      fields[k].el.addEventListener('blur', () => validateField(k));
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+      Object.keys(fields).forEach((k) => { valid = validateField(k) && valid; });
+
+      const successEl = document.getElementById('success');
+      const statusEl = document.getElementById('form-status');
+
+      if (valid) {
+        successEl.hidden = false;
+        statusEl.textContent = 'Form submitted successfully (client-side).';
+        // Simulate clearing after "submission"
+        form.reset();
+        Object.keys(fields).forEach((k) => showError(k, ''));
+        setTimeout(() => { successEl.hidden = true; }, 4000);
+      } else {
+        successEl.hidden = true;
+        statusEl.textContent = 'Please fix the errors in the form.';
+      }
+    });
+  </script>
+</body>
+</html>
