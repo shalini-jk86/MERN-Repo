@@ -1,4 +1,4 @@
-// Signup Validation
+// Signup + Signin Validation
 document.addEventListener("DOMContentLoaded", () => {
   const signupForm = document.getElementById("signupForm");
   const signinForm = document.getElementById("signinForm");
@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     signupForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const name = document.getElementById("fullname").value.trim();
+      const fullname = document.getElementById("fullname").value.trim();
       const email = document.getElementById("email").value.trim();
       const phone = document.getElementById("phone").value.trim();
-      const city = document.getElementById("location").value.trim();
+      const location = document.getElementById("location").value.trim();
       const password = document.getElementById("password").value;
       const confirmPassword = document.getElementById("confirmPassword").value;
 
@@ -25,21 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
         return alert("Password must be at least 8 characters with letters and numbers!");
       }
       if (password !== confirmPassword) return alert("Passwords do not match!");
-        alert("Signup successful! Redirecting...");
-        console.log("Redirecting to SignIn.html");
-       
 
       // Save user data in localStorage
       const user = { fullname, email, phone, location, password };
       localStorage.setItem("user", JSON.stringify(user));
-      //window.location.assign("./SignIn.html");
 
       alert("Signup successful! Please Sign In.");
       window.location.href = "SignIn.html";
     });
   }
 
-  // SignIn Validation
   if (signinForm) {
     signinForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -50,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const user = JSON.parse(localStorage.getItem("user"));
 
       if (!user) return alert("No registered user found. Please Sign Up first.");
-      if (email !== user.email || password !== user.password) {
+      if (email.toLowerCase() !== user.email.toLowerCase() || password !== user.password) {
         return alert("Invalid email or password!");
       }
 
