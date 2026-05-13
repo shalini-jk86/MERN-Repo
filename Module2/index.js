@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     signupForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const name = document.getElementById("name").value.trim();
+      const name = document.getElementById("fullname").value.trim();
       const email = document.getElementById("email").value.trim();
       const phone = document.getElementById("phone").value.trim();
-      const city = document.getElementById("city").value.trim();
+      const city = document.getElementById("location").value.trim();
       const password = document.getElementById("password").value;
       const confirmPassword = document.getElementById("confirmPassword").value;
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!emailRegex.test(email)) return alert("Invalid email format!");
       if (!phoneRegex.test(phone)) return alert("Phone must be 10 digits!");
-      if (!cityRegex.test(city)) return alert("City must contain only alphabets!");
+      if (!cityRegex.test(location)) return alert("City must contain only alphabets!");
       if (password.length < 8 || !/\d/.test(password) || !/[A-Za-z]/.test(password)) {
         return alert("Password must be at least 8 characters with letters and numbers!");
       }
@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
        
 
       // Save user data in localStorage
-      const user = { name, email, phone, city, password };
+      const user = { fullname, email, phone, location, password };
       localStorage.setItem("user", JSON.stringify(user));
-      window.location.assign("./SignIn.html");
+      //window.location.assign("./SignIn.html");
 
-      //alert("Signup successful! Please Sign In.");
-      //window.location.href = "SignIn.html";
+      alert("Signup successful! Please Sign In.");
+      window.location.href = "SignIn.html";
     });
   }
 
