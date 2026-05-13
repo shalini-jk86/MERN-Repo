@@ -1,0 +1,63 @@
+// Signup Validation
+document.addEventListener("DOMContentLoaded", () => {
+  const signupForm = document.getElementById("signupForm");
+  const signinForm = document.getElementById("signinForm");
+
+  if (signupForm) {
+    signupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const city = document.getElementById("city").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^\d{10}$/;
+      const cityRegex = /^[A-Za-z\s]+$/;
+
+      if (!emailRegex.test(email)) return alert("Invalid email format!");
+      if (!phoneRegex.test(phone)) return alert("Phone must be 10 digits!");
+      if (!cityRegex.test(city)) return alert("City must contain only alphabets!");
+      if (password.length < 8 || !/\d/.test(password) || !/[A-Za-z]/.test(password)) {
+        return alert("Password must be at least 8 characters with letters and numbers!");
+      }
+      if (password !== confirmPassword) return alert("Passwords do not match!");
+        alert("Signup successful! Redirecting...");
+        console.log("Redirecting to SignIn.html");
+       
+
+      // Save user data in localStorage
+      const user = { name, email, phone, city, password };
+      localStorage.setItem("user", JSON.stringify(user));
+      window.location.assign("./SignIn.html");
+
+      //alert("Signup successful! Please Sign In.");
+      //window.location.href = "SignIn.html";
+    });
+  }
+
+  // SignIn Validation
+  if (signinForm) {
+    signinForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("signinEmail").value.trim();
+      const password = document.getElementById("signinPassword").value;
+
+      const user = JSON.parse(localStorage.getItem("user"));
+
+      if (!user) return alert("No registered user found. Please Sign Up first.");
+      if (email !== user.email || password !== user.password) {
+        return alert("Invalid email or password!");
+      }
+
+      // Save session
+      sessionStorage.setItem("loggedIn", JSON.stringify(user));
+      alert("Login successful!");
+      window.location.href = "travelapp.html";
+    });
+  }
+});
